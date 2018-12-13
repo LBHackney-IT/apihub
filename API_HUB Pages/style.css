@@ -1,0 +1,96 @@
+body {
+    color: #0b0c0c;
+    font-family: Arial,sans-serif;
+}
+
+h3 {
+    font-weight: 400px;
+    font-size: 1.35rem;
+}
+
+h5  {
+    font-size: 1.5rem;
+}
+
+
+/* HEADER WITH STRIPES */
+header {
+	background: #000;
+    border-bottom: 4px solid #00B140; /* middle stripe */
+	color: #FFF;
+	margin-bottom: 3rem;
+	padding: 2rem;
+	position: relative;
+}
+
+header:before {
+	/* top (thickest) stripe */
+    -webkit-transform: translate3d(0, -8px, 1px);
+    transform: translate3d(0, -8px, 1px);
+
+	background: #00664F;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 8px;
+	left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+header:after {
+	/* bottom (thinnest) stripe */
+    -webkit-transform: translate3d(0, 12px, 1px);
+    transform: translate3d(0, 12px, 1px);
+
+    background: #A4D65E;
+    bottom: 0;
+	content: "";
+    display: block;
+    height: 2px;
+	left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.introductionapi {
+    width: 250px;
+    float: left;
+    margin-left: 1.5rem;
+}
+
+.checklist {
+    float: left;
+    margin-left: 1.5rem;
+    max-width: 50%;
+    height: auto;
+}
+
+.checklist-element {
+    margin-bottom: 5%;
+}
+
+.linkapi {
+    margin-bottom: 0.5rem;
+}
+
+#hackney-logo {
+    height: auto;
+    max-width: 50%;
+}
+
+#apihub-span {
+    position: relative;
+    max-width: 50%;
+}
+
+#apihub-text {
+    font-size: 1.5rem;
+}
+
+#header1 {
+    padding-bottom: 1.5rem;
+}
+
+
+
