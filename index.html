@@ -44,19 +44,31 @@
 
 		<div class="checklist-element">
 			<h3>What is an API?</h3>
-			<p>API stands for "Application Programming Interface".<br/>
-                    They provide a set of methods or actions that enable a systems developer to communicate with another system in a controlled manner.</p>
+			<p>API stands for "Application Programming Interface".</p>
+			<p>An API is usually a web address or url which can be accessed by any device which is able to connect to the API over the internet or network.</p>
+			<p>They provide a set of controlled methods or actions that enable a systems developer to communicate with another system in a controlled manner.</p>			
+			<p>It's likely that every app on your smart phone uses a API behind the scenes.<br/>
+				Each time you tell your smart speaker to turn on the lights in your living room a series of API calls will likely occur in the background in a controlled manner which eventually culminates in a bulb switching on.</p>
+			<p>One important part in the paragraph above is that the APIs should be device agnostic. 
+			It shouldn't matter what brand of phone or smart speaker you have or even what the device is - be it Phone, Speaker or smart-toaster. 
+			The API should behave in the same way to give the same end result as long as the API is visible to that device and the device is able to connect to it.</p>
 		</div>
 
 		<div class="checklist-element">
-			<h3>Why do you need an API?</h3>
-			<p>It's likely that every app on your smart phone uses a API behind the scenes.<br/>
-				Each time you tell your smart speaker to turn on the lights in your living room a series of API calls will likely occur in the background in a controlled manner which eventually culminates in a bulb switching on.			
-			</p>
-			<p>One important part in the paragraph above is that the APIs should be device agnostic. 
-			It shouldn't matter what brand of phone or smart speaker you have or even what the device is - be it Phone, Speaker or smart-toaster. 
-			The API should behave in the same way to give the same end result as long as the API is visible to that device and the device is able to connect to it.
-			In this way a developer should be able to easily </p>
+			<h3>Why might you need an API?</h3>
+			<h4>Data integrity</h4>
+			<p>Using addresses as an example it's clear that many different council systems may need to hold an address. Without a controlled method of accessing those addresses a single address may end up being held in multiple different formats inside the different council systems.</p>
+			<div class="row">
+				<div class="col-md-4">28 Some House<br>2 Some Road<br>Some town<br>E8 4HJ</div>
+				<div class="col-md-4">28 Some House 2 Some Road<br>Some town<br>E84HJ</div>
+				<div class="col-md-4">2 Some Road<br>28 Some House<br>Some city<br>e8 4hj</div>
+			</div>
+			<p>If all of the council systems retrieved their addresses from the same source matching between that data becomes significantly easier.</p>
+			<h4>Integrations</h4>
+			<p>For instance you might have a Repairs system which is only available if an officer is logged on to the network. Each morning an officer would have to come in to the office in order to get a list of what repair jobs there are for that day and they may have to print off that list.  The officer would then leave the office and travel around the borough with a list of jobs that was only current at the point they printed the list. If the officer complete all of their jobs they would either have to phone in to the office to get more jobs or return to the office.</p>
+			<p>An API could be created which connects to the Repairs system and pulls out a list of repairs for a particular day. This API could be made available (in a secure way) over the internet. The remote officer could then be provided with a web page or perhaps even an APP on their device which would allow them to see what repair jobs were needed at that moment. The list is now realtime and current. New jobs would appear automatically. Cancelled jobs would update automatically. An officer could claim a job while out in the borough. All of theses changes would be reflected on the system in the office so office based staff are also getting the most up to date situation. </p>
+			<h4>Easier migration to new systems</h4>
+			<p>By complying with development standards it should make migrations of back-end systems far simpler.  If there was a need to change the back-end repairs system with the example above the changes would be made to the API.  It's possible that the officer's remote web site or app may not need to be changed in order for it to still function.</p>
 		</div>
 
 		<div class="checklist-element">
@@ -69,7 +81,11 @@
 
 		<div class="checklist-element">
 			<h3>What is the API platform?</h3>
-			<p></p>
+			<p>There is more to APIs that just sending a command and the API responding. You don't necessarily want anyone on the internet to be able to turn your living room lights on. You need to be able decide who is allowed to turn the lights on and perhaps even how often they can turn the lights on over a set period of time.</p>
+
+			<p>This is where the API gateway comes in. Using an API Gateway we are able to issue Tokens to people who want to use our APIs. Each time a developer attempts to access our APIs they will provide this token, essentially telling us who they are.  Requests to our APIs that do not provide the token will be rejected. Using that token we can limit how often they can use the API.</p>
+
+			<p>So now we are able to say who and how often they can turn on our living room lights.</p>
 		</div>
 
 		<div class="checklist-element">
