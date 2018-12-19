@@ -57,22 +57,29 @@
 		</div>
 
 		<div class="checklist-element">
-			<h3>What is an API?</h3>
-			<p>API stands for "Application Programming Interface".</p>
-			<p>An API is usually a web address or url which can be accessed by any device which is able to connect to the API over the internet or network.</p>
-			<p>They provide a set of controlled methods or actions that enable a systems developer to communicate with another system in a controlled manner.</p>			
-			<p>It's likely that every app on your smart phone uses a API behind the scenes.<br/>
-				Each time you tell your smart speaker to turn on the lights in your living room a series of API calls will likely occur in the background in a controlled manner which eventually culminates in a bulb switching on.</p>
-			<p>One important part in the paragraph above is that the APIs should be device agnostic. 
-			It shouldn't matter what brand of phone or smart speaker you have or even what the device is - be it Phone, Speaker or smart-toaster. 
-			The API should behave in the same way to give the same end result as long as the API is visible to that device and the device is able to connect to it.</p>
+			<h3>What is an API?</h3>		
+			<p>Each time you tell your smart speaker to "turn on the living room light" the speaker will send an instruction to an API. The API will then send a series of instructions in the background which eventually culminates in a bulb switching on.</p>
+			<p>You didn't need to write any complicated code or give any specifics about what "turn on" means or exactly where "living room light" is located.  All of this information was dealt with inside of the API.</p>
+			<p>Wherever possible APIs shouldn't care what is passing it an instruction. Using an app on your smart phone to turn on your living room lights will use the same API and send the exact same instructions as the smart speaker did. The API should behave in the same way to give the same end result.</p>
+			<p>So an API is a resource that provides a simple way to communicate between two devices or pieces of software.</p>
+			<img src="TurnOnLight.png">
 		</div>
+
+<div></div>
 
 			<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile modified=\&quot;2018-12-17T10:46:22.083Z\&quot; host=\&quot;www.draw.io\&quot; agent=\&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36\&quot; etag=\&quot;2DWcEphciEEx2sHkJNvV\&quot; version=\&quot;9.6.6\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;iyaCTSaKWfuRBwz9zFkZ\&quot; name=\&quot;Page-1\&quot;&gt;7Vpbc5s4GP01ebQHxMXw6Evd3Z10NzOZTtunjAAZ1GDkFXJt59evBBLmIhycxE5mtn4x/hC6nO/oHAn5xpqv958p3CRfSITSG2BE+xtrcQOAaXoT/iUihzLiWmYZiCmOZKFj4B4/IRk0ZHSLI5Q3CjJCUoY3zWBIsgyFrBGDlJJds9iKpM1WNzBGncB9CNNu9BuOWKLG5frHG38gHCeyaQ/IAa+hKixHkicwIrtayPp0Y80pIay8Wu/nKBXgKVzK55Y9d6uOUZSxIQ8sk6/4J3gwtp/B0kjo7On7ExmZTlnNL5hu5Yhlb9lBQRBTst3IYogytNcBDwNV3Oh2zKyGy3mCyBoxeuBFZEUT+YRkiKlq2B3xnijWJDWobdsdyyxAmeW4qvwIBL+QWJyDi3ENXE6kpBct03ebcPmgAxcwvS5cpue9Hqy75XLu0kfrr3X8k95/26+//O2MgAYrN+XNzoIGYu6/W0H2WYozNFJdm/IipsvBcY4F+FUsv4tqVoQjpqtJ3BjlhWiIeoC92Xdrmd79qSriwyvratbPw8Ex1krzLsEM3W9gKH7vuMrxQglbc4QWJr+E+abUnRXeo0j0CafpnKSEFo9bkYO8yObxnFHyiGp3PBBYritHcS8bHMwSo4d5vcSxutOqosR1eGL18mRogk1Hl+DZNueMynNe4JbEOOzN9rtmViPYr82s8tSuAnhGN7Eq9vZiaX5UsbQ1XgJ8jZcA+2LgPI8NXxlsxCVeF4uROgcFVpivRqYpjjMeY2RTi97CAKV3JMcME3E3IIyRtVBYcWMGw0cBexbVqLkqPrxI0dhUUdzQ8V32Z5EwJlZbUwEEWIZRZo0xz9gKZxGi45C3CJYRZJB/iXgu5h1FaJSTEMN0pGLuRNzgsy0g5PEhxDRM0UMoujYygTfeZHEvP57nwWntM12rK35AJ37gDcRP20N7OA9WKdpPxdqV5wBlkbxchCnMc65uQnAgZd1wjTctqaqyzlGkh+8y4cWPH+LHeOJUAomizop4EPh8YQ5pjE4W1CeplhRHo1sqRlEKGf7V7JwuT7KFO4ILVzn0TPGcbGmIZKn6wlk9qMhjtBaoTquictydigqaVMN8OXMmHeZ8zfmWqM0ePmdYkwRNX8pIhlrMkCEoxSXkaUZUozprHEWimZnOMQuFEXpRcCrClItIKUc7lDO9CV5gioOeJNXIZWvIBS6m+7pV8ccwRbcFla8xyYnGJC8njgOw+j+ZJNthxmfiW3skOO2R9rt75ICXEVf1yLHhOE2fdEEVuEMU82ELwSyY8WL3BAPdsyd9F3ZPyY6R3RSN9mZiqJk+U02PlfI8wkOt2EYUyPu93mu8CuMXZQVvasveb1seoCqOPXYaGX93X9a9hfgYvtxawliGxpc9Z2xrJNl2x55f+1xKoQeAF8E8qXhHtky87ZtXb+eN1juWNsfTllt3yN9r5/pVgPKL9T4WBxTjHQoKqx3zbj2iCGddIzAM31nMeJw/EWHefuOea/mvmS3WaQ/2rAYF7Gr21E3ZAFoOHMNvnnb3Qxjzix22B/QLO+fZ+8z2QYhx3X2m/9vQBkxRv21oQDdHr2tpA94tXdnSFDampxMwoJMv0309PNpjB90b2DOPHTzdscOC7+YCmKOhxw1KIcNDWmwKe3hem1hBSfnboApUu9V/SmPtU0zkhqHuZCKa+IFhvPRkwu4h0ElpNU3NXLhctj/GHvJMRFue9l6bPFP1Rx0sGWr2nu1l/nM1vXanpxoCPQ29cO/Hfx7/klEWP/6xxfr0Hw==&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
 			<script type="text/javascript" src="https://www.draw.io/js/viewer.min.js"></script>
 			<br></br>
 		<div class="checklist-element">
 			<h3>Why might you need an API?</h3>
+			<ul>
+				<li>Sharing your data - Secure, structured and real-time access to data can be provided by an API</li>
+				<li>Data integrity - Providing a single source of data in the same format means more consistency across different systems</li>
+				<li>Integrations - APIs can provide links between different back end systems</li>
+			</ul>
+			<!--<h4>Sharing your data</h4>
+			<p>Perhaps a repairs team may need to provide answers to FOI requests about the service they provide.  An API could be made openly available which could provide constant real-time access to data that would satisfy   </p>
+			<p>If you have data that you need to share between other departments or organisations an API can do this in a structured way and in real-time.  </p>
 			<h4>Data integrity</h4>
 			<p>Using addresses as an example it's clear that many different council systems may need to hold an address. Without a controlled method of accessing those addresses a single address may end up being held in multiple different formats inside the different council systems.</p>
 			<div class="row">
@@ -86,7 +93,7 @@
 			<p>An API could be created which connects to the Repairs system and pulls out a list of repairs for a particular day. This API could be made available (in a secure way) over the internet. The remote officer could then be provided with a web page or perhaps even an APP on their device which would allow them to see what repair jobs were needed at that moment. The list is now realtime and current. New jobs would appear automatically. Cancelled jobs would update automatically. An officer could claim a job while out in the borough. All of theses changes would be reflected on the system in the office so office based staff are also getting the most up to date situation. </p>
 			<h4>Easier migration to new systems</h4>
 			<p>By complying with development standards it should make migrations of back-end systems far simpler.  If there was a need to change the back-end repairs system with the example above the changes would be made to the API.  It's possible that the officer's remote web site or app may not need to be changed in order for it to still function.</p>
-		</div>
+		</div>-->
 		<br></br>	
 		<div class="checklist-element">
 			<h3>How to create APIs according to the HackIt API playbook</h3>
