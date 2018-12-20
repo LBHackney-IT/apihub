@@ -50,7 +50,7 @@
             <ul>
 				<li>What APIs are</li>
 				<li>Why might you need an API?</li>
-                <li>How to create APIs according to the HackIt API playbook</li>
+                <li>How to create HackIT APIs</li>
                 <li>What the API platform is</li>
                 <li>A list of the available APIs</li>  
             </ul>
@@ -61,7 +61,7 @@
 			<p>Each time you tell your smart speaker to "turn on the living room light" the speaker will send an instruction to an API. The API will then send a series of instructions in the background which eventually culminates in a bulb switching on.</p>
 			<p>You didn't need to write any complicated code or give any specifics about what "turn on" means or exactly where "living room light" is located.  All of this information was dealt with inside of the API.</p>
 			<p>Wherever possible APIs shouldn't care what is passing it an instruction. Using an app on your smart phone to turn on your living room lights will use the same API and send the exact same instructions as the smart speaker did. The API should behave in the same way to give the same end result.</p>
-			<p>So an API is a resource that provides a simple way to communicate between two devices or pieces of software.</p>
+			<p>Therefore an API is a resource that provides a simple way to communicate between two devices or pieces of software.</p>
 			<img src="TurnOnLight.png">
 		</div>
 
@@ -77,40 +77,25 @@
 				<li>Data integrity - Providing a single source of data in the same format means more consistency across different systems</li>
 				<li>Integrations - APIs can provide links between different back end systems</li>
 			</ul>
-			<!--<h4>Sharing your data</h4>
-			<p>Perhaps a repairs team may need to provide answers to FOI requests about the service they provide.  An API could be made openly available which could provide constant real-time access to data that would satisfy   </p>
-			<p>If you have data that you need to share between other departments or organisations an API can do this in a structured way and in real-time.  </p>
-			<h4>Data integrity</h4>
-			<p>Using addresses as an example it's clear that many different council systems may need to hold an address. Without a controlled method of accessing those addresses a single address may end up being held in multiple different formats inside the different council systems.</p>
-			<div class="row">
-				<div class="col-md-4">28 Some House<br>2 Some Road<br>Some town<br>E8 4HJ</div>
-				<div class="col-md-4">28 Some House 2 Some Road<br>Some town<br>E84HJ</div>
-				<div class="col-md-4">2 Some Road<br>28 Some House<br>Some city<br>e8 4hj</div>
-			</div>
-			<p>If all of the council systems retrieved their addresses from the same source matching between that data becomes significantly easier.</p>
-			<h4>Integrations</h4>
-			<p>For instance you might have a Repairs system which is only available if an officer is logged on to the network. Each morning an officer would have to come in to the office in order to get a list of what repair jobs there are for that day and they may have to print off that list.  The officer would then leave the office and travel around the borough with a list of jobs that was only current at the point they printed the list. If the officer complete all of their jobs they would either have to phone in to the office to get more jobs or return to the office.</p>
-			<p>An API could be created which connects to the Repairs system and pulls out a list of repairs for a particular day. This API could be made available (in a secure way) over the internet. The remote officer could then be provided with a web page or perhaps even an APP on their device which would allow them to see what repair jobs were needed at that moment. The list is now realtime and current. New jobs would appear automatically. Cancelled jobs would update automatically. An officer could claim a job while out in the borough. All of theses changes would be reflected on the system in the office so office based staff are also getting the most up to date situation. </p>
-			<h4>Easier migration to new systems</h4>
-			<p>By complying with development standards it should make migrations of back-end systems far simpler.  If there was a need to change the back-end repairs system with the example above the changes would be made to the API.  It's possible that the officer's remote web site or app may not need to be changed in order for it to still function.</p>
-		</div>-->
 		<br></br>	
 		<div class="checklist-element">
-			<h3>How to create APIs according to the HackIt API playbook</h3>
-			<p>The HackIt API playboook can be found on <a href="https://github.com/LBHackney-IT/API-Playbook">GitHub</a>.<br/>
-			It provides clear guidance on the standards that are being followed when developing new APIs or refactoring APIs which were created prior to the existence of the Playbook.</p>
-			<p>
-
-			</p>
+			<h3>How we create HackIT APIs</h3>
+			<p>All HackIT developed code should meet the 12 <a href="https://github.com/LBHackney-IT/Hackney-Development-Standards">Hackney Development Standards</a>. 
+				These 12 factors (albeit in a adapted or extended form) are used by many development teams around the world to ensure that HackIT APIs are consistent, supportable and of high quality</p>
+			<p>All newly created HackIT APIs will be developed using the guidelines in the <a href="https://github.com/LBHackney-IT/API-Playbook">HackIt API playboook</a>.
+					It provides clear guidance on the standards that are being followed when developing new APIs and is also used whenever amending old APIs which were created prior to the existence of the Playbook.</p>
+			<p>Both of these guides are constantly evolving over time alongside technological changes.</p>
 		</div>
 <br></br>	
 		<div class="checklist-element">
 			<h3>What is the API platform?</h3>
-			<p>There is more to APIs that just sending a command and the API responding. You don't necessarily want anyone on the internet to be able to turn your living room lights on. You need to be able decide who is allowed to turn the lights on and perhaps even how often they can turn the lights on over a set period of time.</p>
+			<p>There is more to APIs that just sending a command and the API responding. You obviously don't want anyone on the internet to be able to turn your living room lights on. You need to be able decide who is allowed to turn the lights on.</p>
+
+			<img src="APIGateway.png">
+
+			<p>You may also want to ensure that someone cannot bombard your API with thousands of calls over a very short period of time. This could cost you time and resources.</p>
 
 			<p>This is where the API gateway comes in. Using an API Gateway we are able to issue Tokens to people who want to use our APIs. Each time a developer attempts to access our APIs they will provide this token, essentially telling us who they are.  Requests to our APIs that do not provide the token will be rejected. Using that token we can limit how often they can use the API.</p>
-
-			<p>So now we are able to say who and how often they can turn on our living room lights.</p>
 		</div>
 
 		<div class="checklist-element">
