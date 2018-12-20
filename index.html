@@ -89,13 +89,13 @@
 <br></br>	
 		<div class="checklist-element">
 			<h3>What is the API platform?</h3>
-			<p>There is more to APIs that just sending a command and the API responding. You obviously don't want anyone on the internet to be able to turn your living room lights on. You need to be able decide who is allowed to turn the lights on.</p>
+			<p>There is more to APIs that just sending a command and the API responding. You obviously don't want anyone on the internet to be able to turn your living room lights on. You need to be able decide who is allowed to turn the lights on. Using an API Gateway we are able to issue Tokens to people who want to use our APIs. Each time a developer attempts to access our APIs they will provide this token, essentially telling us who they are.  Requests to our APIs that do not provide the token will be rejected.</p>
 
 			<img src="APIGateway.png">
 
 			<p>You may also want to ensure that someone cannot bombard your API with thousands of calls over a very short period of time. This could cost you time and resources.</p>
 
-			<p>This is where the API gateway comes in. Using an API Gateway we are able to issue Tokens to people who want to use our APIs. Each time a developer attempts to access our APIs they will provide this token, essentially telling us who they are.  Requests to our APIs that do not provide the token will be rejected. Using that token we can limit how often they can use the API.</p>
+			<p>Using the tokens we can limit how often they can use the API.</p>
 		</div>
 
 		<div class="checklist-element">
